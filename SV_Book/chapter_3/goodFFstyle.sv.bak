@@ -1,0 +1,12 @@
+module goodFFstyle
+    (input logic d, clk, rst_l,
+    output logic q2);
+    logic q1;
+
+    always @(posedge clk)
+        if (~rst_l) q1 <= 1'b0;
+        else q1 <= d;
+
+    always @(posedge clk)
+        q2 <= q1;
+endmodule

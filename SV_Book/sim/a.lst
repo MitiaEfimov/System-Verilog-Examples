@@ -1,0 +1,168 @@
+time:0
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 0  : q = xxxxxxx
+
+
+
+
+
+Shift data all the way left
+
+time:1
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0000000
+
+time:2
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1000000
+
+time:3
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1000000
+
+time:4
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0100000
+
+time:5
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0100000
+
+time:6
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1010000
+
+time:7
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010000
+
+time:8
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101000
+
+time:9
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101000
+
+time:10
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0010100
+
+time:11
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0010100
+
+time:12
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0001010
+
+time:13
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0001010
+
+time:14
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000101
+
+time:15
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000101
+
+time:16
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000010
+
+
+Load data bit while shift enable
+
+time:17
+d = 0101010
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000010
+
+time:18
+d = 0101010
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101010
+
+
+Sync clear data
+
+time:19
+d = 0101010
+clr = 1; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101010
+
+time:20
+d = 0101010
+clr = 1; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000000
+
+
+Store data for several ticks
+
+time:21
+d = 1010101
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000000
+
+time:22
+d = 1010101
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:23
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:24
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010101
+
+time:25
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:26
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010101
+
+
+async reset
+
+time:27
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:28
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 0  : q = 0000000
+
+time:29
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000000
+
