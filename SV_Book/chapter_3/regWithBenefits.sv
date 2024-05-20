@@ -1,4 +1,4 @@
-// напишите и промоделируйте 8-битный регистр
+// Задача 3.1: напишите и промоделируйте 8-битный регистр с заданным заголовком модуля
 module regWithBenefits
     #(parameter W = 8)
     (input logic [W-1:0] d,     // информация, которая должа быть записана в регистр
@@ -13,28 +13,28 @@ module regWithBenefits
     // Если устанолен более, чем один управляющий сигнал, 
     // предполагается следующий приоритет: clr, ld, shl
 
-    logic [W-1:0] stage, next_stage;
+    logic [W-1:0] state, next_state;
 
     // состояние регистра
     always_ff @(posedge clk, negedge rst_l) begin
         if (~rst_l)              // асинхронный сброс
-            stage <= '0;
+            state <= '0;
         else                     // тактовый сигнал
-            stage <= next_stage; 
+            state <= next_state; 
     end
 
     // следующее состояние регистра
     always_comb begin
         if (clr)                   // синхронный сброс
-            next_stage = '0;
+            next_state = '0;
         else if (ld)               // запись регистра при наличии разрешения
-            next_stage = d;      
+            next_state = d;      
         else if (shl)              // сдвиг содержимого регистра влево
-            next_stage = { shIn, stage[W-1:1]};
+            next_state = { shIn, state[W-1:1]};
         else                     // хранение информации
-            next_stage = stage;
+            next_state = state;
     end
 
     // выход регистра
-    assign q = stage;
+    assign q = state;
 endmodule
