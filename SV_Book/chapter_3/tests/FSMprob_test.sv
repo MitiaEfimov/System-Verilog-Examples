@@ -3,20 +3,23 @@
 
 `timescale 1ms/1ms
 module FSMprob_test;
-    logic clk, rst_l, x, y, ok_flag; bit i, j; // порты, определенные в модуле FSMprob
+    logic clk, rst_l, ok_flag; bit i, j; // общие порты, определенные в модуле FSMprob и FSMprob_hardway
+    logic x, y; // Выходные порты FSMprob 
+    logic Xh, Yh; // Выходные порты FSMprob_hardway 
 
     FSMprob dut (.clk, .rst_l, .i, .j, .x, .y, .ok_flag);
-    FSMprob_tb tb (.clk, .i, .j);
-
-    // string st_prob;
-    // reg st_prob = dut.state.name;
+    FSMprob_hardway dut_h (.clk, .rst_l, .i, .j, .x(Xh), .y(Yh));
     reg st_prob = dut.state; 
-
+    
+    FSMprob_tb tb (.clk, .i, .j);
 
 
     initial begin: TEST
-        $monitor("T(%0t): Current State = %b\n x y = %b %b", $time, dut.state, x, y);
+        $monitor("T(%0t): Current State - prob = %b hard = %b%b\ni j = %b %b | x y = %b %b | Xh Yh = %b %b", 
+        $time, dut.state, dut_h.q0, dut_h.q1, i, j, x, y, Xh, Yh);
 
+        if (~ok_flag)
+            $display("Ok flag is gone: %d", ok_flag);
         clk = 0; rst_l = 0;
         rst_l <= #1 1;
         forever # 5 clk = ~clk;
@@ -27,7 +30,6 @@ endmodule
 program FSMprob_tb
     (input clk, output logic i, j);
 
-    // TODO: Разобраться с выходными сигналами XY. Состояния автомата вроде бы корректные.
     initial begin: TB
         {i, j} <= 2'b00; // "A" вариант 1
         @(posedge clk); // на 5 мс: состояние "A", xy = 10
