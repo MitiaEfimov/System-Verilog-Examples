@@ -1,35 +1,338 @@
-T(0): Current State - prob = 00 hard = 00
-i j = 0 0 | x y = 1 0 | Xh Yh = 1 0
-T(5): Current State - prob = 00 hard = 00
-i j = 0 1 | x y = 1 0 | Xh Yh = 1 0
-T(15): Current State - prob = 00 hard = 00
-i j = 1 0 | x y = 1 1 | Xh Yh = 1 1
-T(25): Current State - prob = 01 hard = 01
-i j = 0 1 | x y = 0 1 | Xh Yh = 0 1
-T(35): Current State - prob = 10 hard = 10
-i j = 1 0 | x y = 0 0 | Xh Yh = 0 0
-T(45): Current State - prob = 01 hard = 01
-i j = 1 1 | x y = 0 1 | Xh Yh = 0 1
-T(55): Current State - prob = 10 hard = 10
-i j = 1 1 | x y = 0 0 | Xh Yh = 0 0
-T(65): Current State - prob = 01 hard = 01
-i j = 0 0 | x y = 1 0 | Xh Yh = 1 0
-T(75): Current State - prob = 11 hard = 00
-i j = 1 0 | x y = 0 0 | Xh Yh = 1 1
-T(85): Current State - prob = 11 hard = 01
-i j = 1 1 | x y = 0 0 | Xh Yh = 0 1
-T(95): Current State - prob = 11 hard = 10
-i j = 0 1 | x y = 1 0 | Xh Yh = 1 0
-T(105): Current State - prob = 10 hard = 10
-i j = 0 1 | x y = 1 0 | Xh Yh = 1 0
-T(115): Current State - prob = 10 hard = 10
-i j = 0 0 | x y = 0 0 | Xh Yh = 0 0
-T(125): Current State - prob = 11 hard = 00
-i j = 0 0 | x y = 0 0 | Xh Yh = 1 0
-T(135): Current State - prob = 00 hard = 00
-i j = 1 1 | x y = 1 1 | Xh Yh = 1 1
-T(145): Current State - prob = 01 hard = 01
-i j = 1 0 | x y = 1 0 | Xh Yh = 1 0
-T(155): Current State - prob = 11 hard = 11
-i j = 1 0 | x y = 0 0 | Xh Yh = 0 0
-..\Chapter_3\tests\FSMprob_test.sv:66: $finish called at 156 (1ms)
+VCD info: dumpfile dump.vcd opened for output.
+
+
+
+
+Start
+
+time:0
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 0  : q = xxxxxxx
+
+
+Shift data all the way left
+
+time:1
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0000000
+
+time:2
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1000000
+
+time:3
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1000000
+
+time:4
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0100000
+
+time:5
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0100000
+
+time:6
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1010000
+
+time:7
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010000
+
+time:8
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101000
+
+time:9
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101000
+
+time:10
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0010100
+
+time:11
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0010100
+
+time:12
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0001010
+
+time:13
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0001010
+
+time:14
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000101
+
+time:15
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000101
+
+time:16
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000010
+
+
+Shift data all the way left
+
+time:17
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0000010
+
+time:18
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1000001
+
+time:19
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1000001
+
+time:20
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0100000
+
+time:21
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0100000
+
+time:22
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1010000
+
+time:23
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010000
+
+time:24
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101000
+
+time:25
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101000
+
+time:26
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0010100
+
+time:27
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0010100
+
+time:28
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0001010
+
+time:29
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0001010
+
+time:30
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000101
+
+time:31
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000101
+
+time:32
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000010
+
+
+Shift data all the way left
+
+time:33
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0000010
+
+time:34
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1000001
+
+time:35
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1000001
+
+time:36
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0100000
+
+time:37
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 0 | rst_l = 1  : q = 0100000
+
+time:38
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 1
+clk = 1 | rst_l = 1  : q = 1010000
+
+time:39
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010000
+
+time:40
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101000
+
+time:41
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101000
+
+time:42
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0010100
+
+time:43
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0010100
+
+time:44
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0001010
+
+time:45
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0001010
+
+time:46
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000101
+
+time:47
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000101
+
+time:48
+d = 0000000
+clr = 0; ld = 0; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000010
+
+
+Load data bit while shift enable
+
+time:49
+d = 0101010
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000010
+
+time:50
+d = 0101010
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0101010
+
+
+Sync clear data
+
+time:51
+d = 0101010
+clr = 1; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0101010
+
+time:52
+d = 0101010
+clr = 1; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000000
+
+
+Store data for several ticks
+
+time:53
+d = 1010101
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 0 | rst_l = 1  : q = 0000000
+
+time:54
+d = 1010101
+clr = 0; ld = 1; shl = 1; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:55
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:56
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010101
+
+time:57
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:58
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 0 | rst_l = 1  : q = 1010101
+
+
+async reset
+
+time:59
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 1010101
+
+time:60
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 0  : q = 0000000
+
+time:61
+d = 0000000
+clr = 0; ld = 0; shl = 0; shIn = 0
+clk = 1 | rst_l = 1  : q = 0000000
+
