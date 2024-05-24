@@ -8,6 +8,9 @@ module regWithBenefits_test
 
     initial begin
         // Отслеживаем все интерфейсы
+        $dumpfile("dump.vcd");
+		$dumpvars(0, regWithBenefits_test);
+
         $monitor(
         "time:%0t\nd = %b\nclr = %b; ld = %b; shl = %b; shIn = %b\n",$time, d, clr, ld, shl, shIn, 
         "clk = %b | rst_l = %b  : q = %b\n", clk, rst_l, q);
